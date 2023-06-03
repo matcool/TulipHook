@@ -42,6 +42,17 @@
 
 #endif
 
+#if defined(__ANDROID__)
+
+	#define TULIP_HOOK_ANDROID
+	#define TULIP_HOOK_SUPPORTED_PLATFORM
+
+	#define TULIP_HOOK_DEFAULT_CONV
+
+	#define TULIP_HOOK_DLL
+
+#endif
+
 
 #if !defined(TULIP_HOOK_SUPPORTED_PLATFORM)
 

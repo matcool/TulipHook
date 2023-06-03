@@ -22,6 +22,8 @@ add_library(TulipHook STATIC
 
 target_compile_features(TulipHook PUBLIC cxx_std_20)
 
+add_compile_definitions(HAVE_STDINT_H=1 HAVE_UINT64_T=1 HAVE_SYS_MMAN_H=1 HAVE_SYS_STAT_H=1 HAVE_FCNTL_H=1 HAVE_DIRENT_H=1 HAVE_UNISTD_H=1)
+
 if(NOT capstone)
 	set(CAPSTONE_ARCHITECTURE_DEFAULT Off)
 	set(CAPSTONE_X86_SUPPORT On)
